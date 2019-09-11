@@ -1,5 +1,21 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'react-redux';
 
-const App = () => <h1>Hello World</h1>
+import store from './store';
+import Routes from './routes';
 
-export default App;
+import GlobalStyle from './styles/global';
+import Header from './components/Header';
+
+export default function App() {
+    return (
+        <Provider store={store}>
+            <BrowserRouter>
+                <GlobalStyle />
+                <Header />
+                <Routes />
+            </BrowserRouter>
+        </Provider>
+    )
+}
