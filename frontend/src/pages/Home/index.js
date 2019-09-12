@@ -13,23 +13,25 @@ class Home extends Component {
         products: []
     }
 
-    // async componentDidMount() {
+    async componentDidMount() {
 
-    //     try {
-    //         const response = await api.get('/products');
-    //         const products = response.data.map(product => ({
-    //             ...product,
-    //             priceFormatted: formatPrice(product.price)
-    //         }))
+        try {
+            const response = await api.get('/products');
+            const products = response.data.map(product => ({
+                ...product,
+                priceFormatted: formatPrice(product.price)
+            }));
 
-    //         this.setState({
-    //             products
-    //         })
-    //     }
-    //     catch (e) {
-    //         console.log(e);
-    //     }
-    // }
+            console.log(response);
+
+            this.setState({
+                products
+            })
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
 
     handleAddProduct = product => {
         const { dispatch } = this.props;

@@ -1,5 +1,6 @@
 .DS_*
-frontend/node_modules
-frontend/._*
-frontend/.DS_*
-frontend/npm-debug.log
+*/node_modules
+*/._*
+*/.DS_*
+*/npm-debug.log
+*/yarn.lock
