@@ -12,7 +12,7 @@ export default function cart(state = [], action) {
                 else {
                     draft.push({
                         ...action.product,
-                        amount = 1
+                        amount: 1
                     })
                 }
             });
