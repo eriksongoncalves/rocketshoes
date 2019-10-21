@@ -30,7 +30,7 @@ class Home extends Component {
             })
         }
         catch (e) {
-            console.log(e);
+            console.tron.log(e);
         }
     }
 
